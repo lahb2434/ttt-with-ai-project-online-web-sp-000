@@ -71,7 +71,9 @@ class Game
     o_wins = 0
     draws = 0
     until game_counter == 100
+    game_counter += 1
       play
+      puts game_counter
       if winner == 'X'
         x_wins += 1
       elsif winner == '0'
@@ -79,7 +81,6 @@ class Game
       else draw?
         draws += 1
       end
-      game_counter += 1
     end
     puts "Wargame Concluded!"
     puts "X won #{x_wins} times!"
